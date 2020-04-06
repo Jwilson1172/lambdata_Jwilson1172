@@ -1,0 +1,5 @@
+# .gitignore file
+# ignoreing artifacts from pckage build process
+build/
+dist/
+*.egg-info
