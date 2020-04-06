@@ -14,7 +14,7 @@ setuptools.setup(
     url="https://github.com/Jwilson1172/lambdata_Jwilson1172",
     packages=setuptools.find_packages(),
     classifiers=[
-        "Programming Language :: Python :: 3.7.6",
+        "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
