@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="lambdata-Jwilson1172",
-    version="0.0.2",
+    version="0.0.3",
     author="Joseph Wilson",
     author_email="jw59615@gmail.com",
     description="A package with some simple ds tools for practicing twine syntax",
