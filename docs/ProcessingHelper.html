@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module ProcessingHelper</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>ProcessingHelper</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/mnt/c/Users/joe/OneDrive/Desktop/SCHOOL/lambdata-Jwilson1172/dataframe_utils/ProcessingHelper.py">/mnt/c/Users/joe/OneDrive/Desktop/SCHOOL/lambdata-Jwilson1172/dataframe_utils/ProcessingHelper.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="pandas.html">pandas</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="ProcessingHelper.html#ProcessingHelper">ProcessingHelper</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ProcessingHelper">class <strong>ProcessingHelper</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#ProcessingHelper">ProcessingHelper</a>(df:&nbsp;pandas.core.frame.DataFrame)&nbsp;-&amp;gt;&nbsp;NoneType<br>
+&nbsp;<br>
+<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="ProcessingHelper-__init__"><strong>__init__</strong></a>(self, df: pandas.core.frame.DataFrame) -&gt; NoneType</dt><dd><tt>[summary]<br>
+&nbsp;<br>
+Arguments:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;df&nbsp;{pandas.DataFrame}&nbsp;--&nbsp;takes&nbsp;a&nbsp;dataframe&nbsp;that&nbsp;you&nbsp;want&nbsp;to&nbsp;do&nbsp;actions&nbsp;to,&nbsp;note&nbsp;that&nbsp;the&nbsp;class<br>
+&nbsp;&nbsp;&nbsp;&nbsp;will&nbsp;hold&nbsp;this&nbsp;df&nbsp;<a href="builtins.html#object">object</a>&nbsp;in&nbsp;a&nbsp;private&nbsp;member&nbsp;<a href="builtins.html#object">object</a>&nbsp;until&nbsp;the&nbsp;<a href="#ProcessingHelper-getDataFrame">getDataFrame</a>()&nbsp;method&nbsp;is&nbsp;called&nbsp;or&nbsp;until<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#ProcessingHelper-get_validation_split">get_validation_split</a>()&nbsp;is&nbsp;called&nbsp;returning&nbsp;new&nbsp;dataframes<br>
+returns&nbsp;[NoneType]&nbsp;--&nbsp;private&nbsp;void&nbsp;method&nbsp;does&nbsp;not&nbsp;return&nbsp;anything.</tt></dd></dl>
+
+<dl><dt><a name="ProcessingHelper-convert_dt"><strong>convert_dt</strong></a>(self, column_dt) -&gt; NoneType</dt><dd><tt>[summary]<br>
+this&nbsp;method&nbsp;will&nbsp;take&nbsp;the&nbsp;name&nbsp;of&nbsp;a&nbsp;column&nbsp;that&nbsp;is&nbsp;know&nbsp;to&nbsp;have&nbsp;tatetime&nbsp;objects&nbsp;that&nbsp;ar5e&nbsp;in&nbsp;<a href="builtins.html#object">object</a><br>
+form&nbsp;and&nbsp;convert&nbsp;them&nbsp;to&nbsp;DateTime64&nbsp;form&nbsp;then&nbsp;remove&nbsp;the&nbsp;compoennts&nbsp;from&nbsp;that&nbsp;dt&nbsp;<a href="builtins.html#object">object</a>&nbsp;and&nbsp;store&nbsp;them<br>
+in&nbsp;seperate&nbsp;columns&nbsp;that&nbsp;have&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;corrosponding&nbsp;component&nbsp;eg&nbsp;'day','year'...ect<br>
+&nbsp;<br>
+Arguments:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;column_dt&nbsp;{&nbsp;str&nbsp;|&nbsp;int&nbsp;}&nbsp;--&nbsp;takes&nbsp;the&nbsp;dataframe&nbsp;column&nbsp;header&nbsp;that&nbsp;points&nbsp;to&nbsp;a&nbsp;column&nbsp;with&nbsp;datatime<br>
+&nbsp;&nbsp;&nbsp;&nbsp;information&nbsp;in&nbsp;it,&nbsp;can&nbsp;be&nbsp;of&nbsp;type&nbsp;int&nbsp;or&nbsp;str&nbsp;as&nbsp;long&nbsp;as&nbsp;that&nbsp;str|int&nbsp;points&nbsp;to&nbsp;a&nbsp;column&nbsp;header&nbsp;in&nbsp;a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;pandas&nbsp;dataframe&nbsp;<a href="builtins.html#object">object</a>&nbsp;that&nbsp;was&nbsp;used&nbsp;to&nbsp;inti&nbsp;the&nbsp;class&nbsp;with</tt></dd></dl>
+
+<dl><dt><a name="ProcessingHelper-getDataFrame"><strong>getDataFrame</strong></a>(self) -&gt; pandas.core.frame.DataFrame</dt><dd><tt>[summary]<br>
+this&nbsp;function&nbsp;returns&nbsp;a&nbsp;copy&nbsp;of&nbsp;the&nbsp;private&nbsp;datafram&nbsp;that&nbsp;this&nbsp;class&nbsp;stores&nbsp;in&nbsp;memory<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;[pandas.DataFrame]&nbsp;--&nbsp;the&nbsp;private&nbsp;dataframe&nbsp;that&nbsp;this&nbsp;class&nbsp;is&nbsp;holding&nbsp;in&nbsp;memory</tt></dd></dl>
+
+<dl><dt><a name="ProcessingHelper-get_validation_split"><strong>get_validation_split</strong></a>(self, frac=0.2, val_set=True, random_state=42)</dt><dd><tt>a&nbsp;function&nbsp;to&nbsp;make&nbsp;a&nbsp;validation&nbsp;split&nbsp;in&nbsp;a&nbsp;dataframe.<br>
+&nbsp;<br>
+Keyword&nbsp;Arguments:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;frac&nbsp;{float}&nbsp;--&nbsp;the&nbsp;ratio&nbsp;of&nbsp;data&nbsp;to&nbsp;split&nbsp;off&nbsp;in&nbsp;the&nbsp;test&nbsp;set&nbsp;and&nbsp;optiionally&nbsp;the&nbsp;validation&nbsp;set.&nbsp;(default:&nbsp;{0.2})<br>
+&nbsp;&nbsp;&nbsp;&nbsp;val_set&nbsp;{bool}&nbsp;--&nbsp;toogle&nbsp;the&nbsp;spliting&nbsp;for&nbsp;a&nbsp;validation&nbsp;set&nbsp;(default:&nbsp;{True})<br>
+&nbsp;&nbsp;&nbsp;&nbsp;random_state&nbsp;{int}&nbsp;--&nbsp;the&nbsp;random&nbsp;seed&nbsp;to&nbsp;use&nbsp;for&nbsp;reproducibility&nbsp;(default:&nbsp;{42})<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;[DataFrame]&nbsp;--&nbsp;this&nbsp;emthod&nbsp;will&nbsp;return&nbsp;a&nbsp;tuple&nbsp;of&nbsp;dataframes&nbsp;for&nbsp;each&nbsp;split&nbsp;that&nbsp;was&nbsp;mad,&nbsp;for&nbsp;insance&nbsp;if&nbsp;you&nbsp;have&nbsp;a&nbsp;validation<br>
+&nbsp;&nbsp;&nbsp;&nbsp;then&nbsp;it&nbsp;will&nbsp;return&nbsp;3&nbsp;dataframe&nbsp;objects&nbsp;ina&nbsp;&nbsp;tuple,&nbsp;if&nbsp;you&nbsp;didn't&nbsp;then&nbsp;it&nbsp;will&nbsp;only&nbsp;return&nbsp;2</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>
