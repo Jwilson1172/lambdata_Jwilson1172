@@ -10,3 +10,6 @@ __pycache__
 
 #ignore data
 */*.csv
+
+# ignore management scripts
+*.sh
