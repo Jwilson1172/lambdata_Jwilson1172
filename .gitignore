@@ -3,3 +3,8 @@
 build/
 dist/
 *.egg-info
+# ignore python byte code
+*/__pycache__
+
+#ignore data
+*/*.csv
