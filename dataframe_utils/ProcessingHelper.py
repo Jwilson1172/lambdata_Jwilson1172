@@ -1,5 +1,5 @@
+import pandas as pd
 class ProcessingHelper():
-    import pandas as pd
 
     def __init__(self, df: pd.DataFrame) -> type(None):
         """[summary]
@@ -48,7 +48,7 @@ class ProcessingHelper():
             return False
         return True
 
-    def _add_col(self, col_name: str, data: pandas.Series) -> type(None):
+    def _add_col(self, col_name: str, data: pd.Series) -> type(None):
         try:
             self._dframe[col_name] = data
         except Exception as e:
